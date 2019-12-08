@@ -54,3 +54,64 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
     '@/assets/sass/all.sass'
   ],
 ```
+
+---
+
+# SEO
+
+Nuxt 能夠讓你客製 `<HEAD>`
+
+## 全域: 整個網站，寫在全域設定檔 nuxt.config.js
+
+## 單頁: 套用單頁，寫在頁面元件 pages/\*.vue 的 head 設定
+
+```
+export default {
+        head: {
+          title: '甜點電商 - 巧克力布朗尼'
+        },
+        /*...略*/
+    }
+```
+
+## 關於 SMO Tag
+
+社群媒體有各自的定義，你可以針對需要，查詢該 SMS 需要填寫哪些資訊
+
+## 洋洋灑灑列出如下:
+
+### Twitter meta-tags
+
+```
+twitter:card
+twitter:site
+twitter:title
+twitter:description
+twitter:creator
+twitter:image
+twitter:data1
+twitter:label1
+twitter:data2
+twitter:label2
+```
+
+### Open Graph Data
+
+```
+og:title
+og:type
+og:image
+og:description
+og:site_name
+og:url
+og:locale
+```
+
+### Facebook specific tags
+
+```
+fb:admins (for an existing related facebook page)
+```
+
+SMS 也有提供偵錯工具，供人預覽自家網站的完成度
+Facebook Debugger - https://developers.facebook.com/tools/debug/
