@@ -50,6 +50,9 @@ export default {
   data() {
     return { title: 1 };
   },
+  validate() {
+    return false;
+  },
 
   /* Server, Nuxt Hooks */
   asyncData({ params }, callback) {
