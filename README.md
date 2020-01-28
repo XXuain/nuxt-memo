@@ -30,33 +30,6 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 - nuxt.config.js: Nuxt 全域設定檔
 - .nuxt: Nuxt 暫存資料夾
 
-### 模板語言換成 Pug
-
-\$ yarn add -D pug pug-plain-loader
-
-### 樣式換成 SASS
-
-\$ yarn add -D node-sass sass-loader
-
-### 安裝 SUSY (這版面用 SUSY 定義格線系統)
-
-\$ yarn add -D susy
-
-### 定義全域樣式
-
-- nuxt.config.js
-
-```
-  /*
-  ** Global CSS
-  */
-  css: [
-    '@/assets/sass/all.sass'
-  ],
-```
-
----
-
 # SEO
 
 Nuxt 能夠讓你客製 `<HEAD>`
@@ -78,7 +51,7 @@ export default {
 
 社群媒體有各自的定義，你可以針對需要，查詢該 SMS 需要填寫哪些資訊
 
-## 洋洋灑灑列出如下:
+## 列出如下:
 
 ### Twitter meta-tags
 
@@ -115,3 +88,36 @@ fb:admins (for an existing related facebook page)
 
 SMS 也有提供偵錯工具，供人預覽自家網站的完成度
 Facebook Debugger - https://developers.facebook.com/tools/debug/
+
+# Nuxt 擴充屬性：
+
+Page Component @/pages -> 有
+
+# 使用甜點電商模板 需執行：
+
+### 模板語言換成 Pug
+
+\$ yarn add -D pug pug-plain-loader
+
+### 樣式換成 SASS
+
+\$ yarn add -D node-sass sass-loader
+
+### 安裝 SUSY (這版面用 SUSY 定義格線系統)
+
+\$ yarn add -D susy
+
+### 定義全域樣式
+
+- nuxt.config.js
+
+```
+  /*
+  ** Global CSS
+  */
+  css: [
+    '@/assets/sass/all.sass'
+  ],
+```
+
+---

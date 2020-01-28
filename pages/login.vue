@@ -46,6 +46,21 @@
 
 <script>
 export default {
-  layout: "front"
+  /* Both */
+  data() {
+    return { title: 1 };
+  },
+
+  /* Server, Nuxt Hooks */
+  asyncData({ params }, callback) {
+    callback(null, { title: 2 });
+  },
+  fetch() {},
+  layout: "front",
+
+  /* Client, Vue Hooks */
+  mounted() {
+    console.info(this.title); /* 1 */
+  }
 };
 </script>
