@@ -51,7 +51,7 @@ export default {
     return { title: 1 };
   },
   validate() {
-    return false;
+    return true;
   },
 
   /* Server, Nuxt Hooks */
