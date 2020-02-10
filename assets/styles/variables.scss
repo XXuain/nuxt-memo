@@ -1,0 +1,134 @@
+// $color
+$colorPrimary: #2762ee;
+$colorSecondary: #ff9244;
+$colorSecondaryLight: #ffb300;
+$colorThird: #00b5a0;
+$colorThirdLight: #80cc31;
+$colorRed: #ea4141;
+$colorRedLight: #ff9393;
+$colorBlueLight: #00c3ff;
+$colorBlack: #000000;
+$colorBlackLight: #444444;
+$colorWhite: #fff;
+$colorGray: #d8d8d8;
+$colorGrayLight: #e2e2e2;
+$colorGrayDark: #a6a6a6;
+$colorFont: #011117;
+$colorFontDark: $colorBlack;
+$colorFontLight: #858585;
+$colorFontLight2: #b4b4b4;
+$colorBg: #f6f6f6;
+
+$fontStyle: 'PingFangSC', 'Noto Sans', '微軟正黑體', 'Helvetica', 'roboto',
+  arial;
+
+// == $mixin ==
+// extend
+// clearfix 清除浮動
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// position absolute center 置中
+@mixin abCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin hCenter {
+  &:after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+  }
+  > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+@mixin moreText {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// 背景圖
+@mixin bgCenter($w: 'none', $h: 'none') {
+  @if $w != 'none' {
+    width: $w;
+  }
+  @if $h != 'none' {
+    height: $h;
+  }
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+// 隱藏，但元素存在
+@mixin hideEl {
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+}
+
+@mixin showEl {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+
+// rwd斷點
+@mixin rwd($point) {
+  @if $point == xs {
+    @media (max-width: 375px) {
+      @content;
+    }
+  }
+  @if $point == sm {
+    @media (max-width: 568px) {
+      @content;
+    }
+  }
+  @if $point == pad {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $point == md {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+  @if $point == lg {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $point == lt {
+    @media (max-width: 1440px) {
+      @content;
+    }
+  }
+  @if $point == llg {
+    @media (max-width: 1540px) {
+      @content;
+    }
+  }
+}

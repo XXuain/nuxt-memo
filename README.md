@@ -92,32 +92,3 @@ Facebook Debugger - https://developers.facebook.com/tools/debug/
 # Nuxt 擴充屬性：
 
 Page Component @/pages -> 有
-
-# 使用甜點電商模板 需執行：
-
-### 模板語言換成 Pug
-
-\$ yarn add -D pug pug-plain-loader
-
-### 樣式換成 SASS
-
-\$ yarn add -D node-sass sass-loader
-
-### 安裝 SUSY (這版面用 SUSY 定義格線系統)
-
-\$ yarn add -D susy
-
-### 定義全域樣式
-
-- nuxt.config.js
-
-```
-  /*
-  ** Global CSS
-  */
-  css: [
-    '@/assets/sass/all.sass'
-  ],
-```
-
----

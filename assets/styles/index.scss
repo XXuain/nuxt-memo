@@ -1,0 +1,54 @@
+// $typography 字體排版
+body {
+  color: $colorFont;
+  font-family: $fontStyle;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+body.fixed {
+  overflow: hidden;
+}
+
+.title {
+  color: $colorFont;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.subtitle {
+  color: $colorFont;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.36;
+}
+
+p,
+.text {
+  color: $colorFont;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.38;
+}
+
+// common
+body * {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.hidden {
+  display: none !important;
+}

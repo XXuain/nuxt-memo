@@ -1,43 +1,29 @@
 module.exports = {
-  mode: "universal",
+  mode: 'universal',
   /*
    ** Headers of the page
    */
   head: {
-    title: "甜點電商",
+    title: process.env.npm_package_name || '',
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { "http-equiv": "X-UA-Compatible", content: "ie=edge" },
-      { property: "og:title", content: "甜點電商" },
-      { property: "og:description", content: "六角學院的甜點電商" },
-      { property: "og:site_name", content: "甜點電商" },
-      { property: "og:locale", content: "zh_TW" }
-    ],
-    link: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        rel: "shortcut icon",
-        href: "~/img/favicon_48.ico",
-        type: "image/x-icon"
-      },
-      {
-        rel: "stylesheet",
-        href: "https://use.fontawesome.com/releases/v5.3.1/css/all.css",
-        integrity:
-          "sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU",
-        crossorigin: "anonymous"
+        hid: 'description',
+        name: 'description',
+        content: process.env.npm_package_description || ''
       }
-    ]
+    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: "#fff" },
+  loading: { color: '#fff' },
   /*
    ** Global CSS
    */
-  css: ["@/assets/sass/all.sass"],
+  css: ['~/assets/styles/normalize.css', '~/assets/styles/global.scss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -49,7 +35,11 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ['@nuxtjs/style-resources'],
+  // 全域 sass (變數、mixin、extend... ) 檔案引入設定
+  styleResources: {
+    scss: ['~/assets/styles/variables.scss']
+  },
   /*
    ** Build configuration
    */
@@ -59,4 +49,4 @@ module.exports = {
      */
     extend(config, ctx) {}
   }
-};
+}

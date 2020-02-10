@@ -16,11 +16,13 @@
     "express": "^4.16.4"
   },
   "devDependencies": {
-    "node-sass": "^4.13.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "node-sass": "^4.13.1",
     "nodemon": "^1.18.9",
-    "pug": "^2.0.4",
-    "pug-plain-loader": "^1.0.0",
-    "sass-loader": "^8.0.0",
-    "susy": "^3.0.5"
+    "nuxt-sass-resources-loader": "^2.0.5",
+    "prettier": "^1.16.4",
+    "sass-loader": "^8.0.2"
   }
 }

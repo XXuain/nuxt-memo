@@ -1,0 +1,15 @@
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+@keyframes turnRound {
+  100% {
+    transform-origin: center center;
+    transform: rotate(360deg);
+  }
+}
